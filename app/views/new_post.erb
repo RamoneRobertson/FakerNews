@@ -1,0 +1,30 @@
+<h2>Add Post</h2>
+
+<% if @post.errors.present? %>
+  <div>
+    <strong class="alert alert-warning alert-dismissible fade show"><%= @post.errors.full_messages.join(' and ') %></strong>
+  </div>
+<% end %>
+
+<form action="/posts" method="POSt">
+  <div class="input-group mb-3 shadow">
+    <span for="title" class="input-group-text" id="basic-addon1">Title</span>
+    <input name="title" type="text" class="form-control" placeholder="Enter Title..." aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+
+  <div class="input-group mb-3 shadow">
+    <span for="url" class="input-group-text" id="basic-addon1">URL</span>
+    <input name="url" type="text" class="form-control" placeholder="Enter URL..." aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3 shadow">
+    <span for="text" class="input-group-text">Desc</span>
+    <textarea name="text" class="form-control" aria-label="With textarea"></textarea>
+  </div>
+
+
+  <div>
+    <button class="btn btn-primary shadow" type="submit" value="Add">Submit</button>
+  </div>
+</form>

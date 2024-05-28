@@ -1,0 +1,53 @@
+<div class="container" id="main-content">
+  <div class="row align-items-start">
+
+    <div class="col-4">
+      <h2>Top Posts</h2>
+        <ol class="list-group">
+        <% @top_posts.each do |post| %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a class="link-offset-2 link-underline link-underline-opacity-0" href="<%= post.url %>" target="_blank">
+              <%= post.title %>
+            </a>
+            <div>
+              <span class="badge"><%= post.votes %></span>
+            </div>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+
+    <div class="col-5">
+      <h2>Latest Posts</h2>
+      <% @posts.each do |post| %>
+
+        <div class="card w-100 shadow p-3 mb-3 rounded text-bg-light">
+
+          <div id="card-header">
+            <div><%= post.user.username %></div>
+            <div><%= post.date.strftime("%A %B %d, %Y") %></div>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title"><%= post.title %></h5>
+            <p class="card-text"><%= post.text %></p>
+          </div>
+
+          <div class="card-footer bg-transparent">
+            <a href="<%= post.url %>" target="_blank" class="card-link">Read More</a>
+            <form action="/posts/<%= post.id %>/upvote" method="POST">
+              <input type="hidden" name="_method" value="PUT">
+              <button class="btn btn-outline-primary" id="vote" type="submit" value="upvote"><i class="fa-regular fa-thumbs-up"></i></button>
+              <span><%= post.votes %></span>
+            </form>
+
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-3">
+      <%= erb :new_post %>
+    </div>
+  </div>
+</div>

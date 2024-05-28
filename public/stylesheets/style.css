@@ -1,0 +1,83 @@
+/* Add here custom style rules for your views */
+body {
+  background-color: rgb(245, 245, 245);
+  background-image: url('../assets/arhitecture-bg.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 500px;
+  padding-top: 12px;
+  margin: 0px;
+}
+
+.navbar {
+  padding: 6px;
+  margin-bottom: 12px;
+  background-color: #FFFFFF;
+}
+
+#search-bar {
+  width: 680px;
+}
+
+.brand {
+
+}
+
+
+.container {
+  margin-top: 6px;
+  width: 100%;
+  left: 0;
+}
+
+.card {
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+#card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#vote {
+  border: none;
+}
+
+#main {
+  padding: 36px;
+}
+
+.btn {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list-group-item {
+ color: #0A0908;
+ background-color: #FFFFFF;
+ line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px, solid, #FFFFFF;
+}
+
+h2 {
+  font-size: 24px;
+  color: #0A0908;
+}
+
+i {
+  color: #F17300;
+}

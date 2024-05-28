@@ -1,0 +1,9 @@
+  <div class="card">
+         <ul>
+          <% @top_posts.each do |post| %>
+            <li>
+              <%= post.title %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
